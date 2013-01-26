@@ -1,0 +1,6 @@
+
+console.write('hello');
+:wq
+
+
+
