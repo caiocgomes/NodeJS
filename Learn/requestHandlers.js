@@ -48,6 +48,8 @@ function upload(response,request){
 
 			var base64data = data
 			
+			console.log(files.upload.name);
+			
 			var param = {Bucket: 'images.caiogomes.com.br',Key :'images/'+files.upload.name,Body : base64data,ACL:'public-read',ContentType: 'image/png'};
 
 			s3.client.putObject(param, function (){
@@ -57,6 +59,7 @@ function upload(response,request){
 
 		});
 
+		response.end();
 		
 	});
 
